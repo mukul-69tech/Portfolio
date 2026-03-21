@@ -38,7 +38,7 @@
 
 <img src="profile.jpeg" class="profile">
 
-<h1>Hi, I'm <span>Mukul Chauhan</span></h1>
+<h1>Hi, I'm <span>Mukul Kumar</span></h1>
 
 <h2><span id="typing"></span></h2>
 
@@ -105,6 +105,83 @@ My goal is to become a <span class="highlight">skilled Cloud Engineer</span> and
 </p>
 
 </div>
+</section>
+
+
+<section id="education" class="education">
+
+<h2>Education</h2>
+
+<div class="education-container">
+
+<!-- College -->
+
+<div class="edu-card">
+
+<div class="edu-icon">
+<i class="fas fa-graduation-cap"></i>
+</div>
+
+<div class="edu-content">
+<h3>Lovely Professional University</h3>
+<p>Bachelor of Technology - Computer Science and Engineering</p>
+
+<div class="edu-details">
+<span>Aug 2023 – Jun 2027</span>
+<span class="highlight-box">CGPA: 6.69</span>
+</div>
+</div>
+
+<div class="edu-location">Punjab, India</div>
+
+</div>
+
+<!-- 12th -->
+
+<div class="edu-card">
+
+<div class="edu-icon">
+<i class="fas fa-school"></i>
+</div>
+
+<div class="edu-content">
+<h3>St. Mary's School (12th)</h3>
+<p>Intermediate</p>
+
+<div class="edu-details">
+<span>2022 – 2023</span>
+<span class="highlight-box">70%</span>
+</div>
+</div>
+
+<div class="edu-location">Kashipur, Uttarakhand</div>
+
+</div>
+
+<!-- 10th -->
+
+<div class="edu-card">
+
+<div class="edu-icon">
+<i class="fas fa-book"></i>
+</div>
+
+<div class="edu-content">
+<h3>St. Mary's School (10th)</h3>
+<p>Matriculation</p>
+
+<div class="edu-details">
+<span>2020 – 2021</span>
+<span class="highlight-box">87%</span>
+</div>
+</div>
+
+<div class="edu-location">Kashipur, Uttarakhand</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- SKILLS -->
@@ -242,25 +319,25 @@ Achieved <strong>Grade A+</strong> in the training program.
 
 <div class="certificate-card">
 <img src="certificate1.jpeg" onclick="openModal(this.src)">
-<h3>DSA using C++</h3>
-<p>LPU</p>
+<h3>Data Structures and Algorithms using C++</h3>
+<p>Lovely Professional University</p>
 </div>
 
 <div class="certificate-card">
 <img src="certificate2.jpeg" onclick="openModal(this.src)">
 <h3>Social Networks</h3>
-<p>NPTEL</p>
+<p>NPTEL - IIT Madras</p>
 </div>
 
 <div class="certificate-card">
 <img src="certificate3.jpeg" onclick="openModal(this.src)">
-<h3>Oracle Cloud</h3>
-<p>Oracle</p>
+<h3>Oracle Cloud Infrastructure Foundations Associate</h3>
+<p>Oracle University</p>
 </div>
 
 <div class="certificate-card">
 <img src="certificate4.jpg" onclick="openModal(this.src)">
-<h3>Ethical Hacking</h3>
+<h3>Ethical Hacking Industrial Training</h3>
 <p>Code Sprint</p>
 </div>
 
@@ -268,56 +345,74 @@ Achieved <strong>Grade A+</strong> in the training program.
 
 </section>
 
+
 <!-- MODAL -->
 
-<div id="modal" class="modal" onclick="closeModal()">
+<div id="modal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
 <img id="modal-img">
 </div>
 
-<!-- CONTACT -->
 
-<section id="contact" class="contact">
+<!-- JS (IMPORTANT - yahi se kaam chalega) -->
 
-<h2>Contact Me</h2>
+<script>
+function openModal(src){
+document.getElementById("modal").style.display = "flex";
+document.getElementById("modal-img").src = src;
+}
 
-<p class="contact-subtitle">
-Feel free to connect with me for opportunities, collaborations or just a tech talk 🚀
-</p>
+function closeModal(){
+document.getElementById("modal").style.display = "none";
+}
 
-<div class="contact-container">
+/* click outside close */
 
-<!-- Email -->
+document.getElementById("modal").addEventListener("click", function(e){
+if(e.target.id === "modal"){
+closeModal();
+}
+});
+</script>
 
-<div class="contact-card">
-<i class="fas fa-envelope"></i>
-<h3>Email</h3>
-<p>your-email@gmail.com</p>
+</body>
+</html>
+
+
+<<section id="contact" class="contact">
+
+<h2 class="contact-title">Get In Touch</h2>
+
+<div class="contact-top">
+
+<span><i class="fas fa-envelope"></i> mukulchauhan@gmail.com</span>
+<span><i class="fas fa-phone"></i> +91 9027278264</span>
+
+<a href="https://github.com/mukul-69tech" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/mukul-kumar-chauhan-80b946298/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
 </div>
 
-<!-- GitHub -->
+<form class="contact-form">
 
-<div class="contact-card">
-<i class="fab fa-github"></i>
-<h3>GitHub</h3>
-<p>github.com/yourusername</p>
+<div class="form-row">
+<input type="text" placeholder="Name *" required>
+<input type="email" placeholder="Email *" required>
 </div>
 
-<!-- LinkedIn -->
+<input type="text" placeholder="Subject">
 
-<div class="contact-card">
-<i class="fab fa-linkedin"></i>
-<h3>LinkedIn</h3>
-<p>linkedin.com/in/yourusername</p>
-</div>
+<textarea placeholder="Message *" required></textarea>
 
-<!-- Location -->
+<button type="submit">
+<i class="fas fa-paper-plane"></i> Send Message
+</button>
 
-<div class="contact-card">
-<i class="fas fa-map-marker-alt"></i>
-<h3>Location</h3>
-<p>India</p>
-</div>
-
-</div>
+</form>
 
 </section>

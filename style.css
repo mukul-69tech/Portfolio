@@ -417,53 +417,169 @@ text-align:center;
 }
 
 .contact h2{
-color:#38bdf8;
-margin-bottom:10px;
+font-size:40px;
+margin-bottom:20px;
 }
 
-.contact-subtitle{
+/* TOP INFO */
+
+.contact-top{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-bottom:40px;
 color:#94a3b8;
+}
+
+.contact-top span,
+.contact-top a{
+display:flex;
+align-items:center;
+gap:8px;
+color:#94a3b8;
+text-decoration:none;
+}
+
+.contact-top i{
+color:#38bdf8;
+}
+
+/* FORM */
+
+.contact-form{
+max-width:900px;
+margin:auto;
+}
+
+.form-row{
+display:flex;
+gap:20px;
+margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+background:#1e293b;
+border:1px solid #334155;
+border-radius:10px;
+color:white;
+outline:none;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#38bdf8;
+}
+
+.contact-form textarea{
+height:150px;
+resize:none;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.contact-form button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px rgba(99,102,241,0.6);
+}
+
+
+/* EDUCATION */
+
+.education{
+padding:100px 10%;
+text-align:center;
+}
+
+.education h2{
+color:#38bdf8;
 margin-bottom:40px;
 }
 
-/* GRID */
-
-.contact-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+.education-container{
+display:flex;
+flex-direction:column;
 gap:30px;
 }
 
 /* CARD */
 
-.contact-card{
+.edu-card{
+display:flex;
+align-items:center;
+justify-content:space-between;
 background:#1e293b;
 padding:30px;
 border-radius:20px;
-transition:0.3s;
 border:1px solid #334155;
 box-shadow:0 0 20px rgba(56,189,248,0.1);
+transition:0.3s;
 }
 
-.contact-card:hover{
-transform:translateY(-10px);
+.edu-card:hover{
+transform:translateY(-5px);
 box-shadow:0 0 40px rgba(56,189,248,0.4);
 }
 
 /* ICON */
 
-.contact-card i{
-font-size:35px;
+.edu-icon{
+font-size:30px;
 color:#38bdf8;
-margin-bottom:15px;
+margin-right:20px;
 }
 
-/* TEXT */
+/* CONTENT */
 
-.contact-card h3{
+.edu-content{
+text-align:left;
+flex:1;
+}
+
+.edu-content h3{
+margin-bottom:5px;
+}
+
+.edu-content p{
+color:#94a3b8;
 margin-bottom:10px;
 }
 
-.contact-card p{
-color:#cbd5f5;
+/* DETAILS */
+
+.edu-details{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.highlight-box{
+background:#020617;
+padding:5px 12px;
+border-radius:20px;
+border:1px solid #38bdf8;
+}
+
+/* LOCATION */
+
+.edu-location{
+color:#94a3b8;
+font-size:14px;
 }

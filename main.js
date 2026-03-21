@@ -1,3 +1,5 @@
+window.onload = function(){
+
 const text = [
 "Aspiring Cloud Engineer",
 "C++ Developer",
@@ -30,21 +32,25 @@ setTimeout(type,120);
 
 type();
 
-function openModal(src){
+/* MODAL FUNCTIONS */
+
+window.openModal = function(src){
 document.getElementById("modal").style.display = "flex";
 document.getElementById("modal-img").src = src;
 }
 
-function closeModal(){
+window.closeModal = function(){
 document.getElementById("modal").style.display = "none";
 }
 
+/* CLICK OUTSIDE CLOSE */
 
-function openModal(src){
-document.getElementById("modal").style.display = "flex";
-document.getElementById("modal-img").src = src;
-}
+const modal = document.getElementById("modal");
 
-function closeModal(){
-document.getElementById("modal").style.display = "none";
+modal.addEventListener("click", function(e){
+if(e.target.id === "modal"){
+closeModal();
 }
+});
+
+};
